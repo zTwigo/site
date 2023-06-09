@@ -1,0 +1,7 @@
+/* Website's background image */
+body{
+    background-image: url("img/sfondo.png");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}

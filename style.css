@@ -1,7 +1,310 @@
-/* Website's background image */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    font-family: 'Avenir Next LT Pro', sans-serif;    
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: linear-gradient(0deg,#000,#001)
+}
+.images-container-film::-webkit-scrollbar,.images-container-serie::-webkit-scrollbar{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(180deg,#1c1d32,#000);
+    border-radius: 100vh;
+}
 body{
-    background-image: url("img/sfondo.png");
-    background-size: 100% 100%;
-    background-attachment: fixed;
+    background-image:url("sfondo.jpg");
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.body-over{
+    background-image:url("sw/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+header{
+    background: rgba(28, 29, 34, 0.4);
+}
+#sec1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg,#1c1d32,transparent);
+    border:none;
+}
+#sec2{
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(180deg,#1c1d32,#141414);
+    border:none;
+}
+.film-container,.serie-container{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 4vh;
+}
+.spinoff-container{
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+.site-p{
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+}
+.over{
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+    z-index: 1;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(255,255,255); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.model-main{
+    background-color: rgb(28, 29, 34);
+    overflow: auto;
+    overflow-x: hidden;
+    /* box-shadow: 50px 50px 50px 0px rgba(0, 0, 0, 1); */
+}
+.model-exit{
+    font-family: 'Avenir Next LT Pro', sans-serif; 
+    color: white;
+    background: rgba(28, 29, 34, 0.5);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    border-radius: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: 2vh;
+    right: 10.5vw;
+    cursor: pointer;
+}
+.model-back-img{
+    position: relative;
+    background-image: url("banners/banner-mando.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.modal-logo{
+    top: 1vh;
+    left: 10.5vw;   
+    position: absolute;
+    width: 1250px;
+}
+.modal-banner-main{
+    background: linear-gradient(0deg,#1c1d32,transparent);
+    overflow: hidden;
+}
+.modal-banner-p{
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 31vh;
+    left: 11.7vw;
+}
+.modal-banner-desc{
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    font-weight: bold;
+    top: 52vh;
+    width: 25vw;
+    left: 11.7vw;
+}
+.model-argo{
+    display: grid;
+    grid-template-columns: 97px 50px 80vw;
+    column-gap: 10px;
+}
+.model-argo-div{
+    border-bottom: solid white 5px;
+    border-radius: 2px;
+}
+.model-argo-p1,.model-argo-p2{
+    /* text-shadow: 0px 0px 0px white, 0 0 1px white, 0 0 1px white; */
+    box-shadow: 30px 30px 30px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+.model-argo-p1{
+    width: 90.5px;
+}
+.model-argo-p:focus{
+    border-bottom: solid white 1px;
+}
+.model-sec-main{
+    position:relative;
+    display: grid;
+    grid-template-columns: 2vw 96vw 2vw;
+    /* box-shadow: 50px 50px 50px 50px rgba(0, 0, 0, 1); */
+    z-index: 2;
+}
+.model-sub-main{
+    display: grid;
+    margin-top: 20px;
+    grid-template-rows: 20vh 20vh 20vh 20vh;
+    row-gap: 30px;
+}
+.first-char{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.modal-img{
+    width: 100%;
+    background: linear-gradient(180deg,#1c1d32,transparent);
+    border:none;
+}
+.img-char{
+    width: 100%;
+    box-shadow: 30px 30px 30px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+     margin-bottom: 20px;
+}
+.p1-char{
+    color: rgb(238, 220, 220);
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.p2-char{
+    color: rgb(197, 187, 187);
+    font-family: 'Avenir Next LT Pro', sans-serif;    
+}
+.model-side{
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 4px 30px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    position: sticky;   
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.logo-p{
+    font-family: 'Star Wars', sans-serif;
+    color: black;
+    -webkit-text-stroke: 1px orange;
+    font-size: 70px;
+    margin-top: 100px;
+    margin-bottom: 170px;
+}
+main{
+    min-height: calc(100vh - 59px - 324px);
+}
+.films-img{
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.images-container-film{
+    display: grid;
+    grid-template-columns: 17vw 17vw 17vw 17vw 17vw 17vw 17vw 17vw 17vw;
+    column-gap: 1vw;
+    overflow-x: scroll;
+}
+.images-container-serie{
+    display: grid;
+    grid-template-columns: 17vw 17vw 17vw 17vw 17vw 17vw 17vw 17vw 17vw;
+    column-gap: 1vw;
+    overflow-x: scroll;
+}
+.images-container-spinoff{
+    display: grid;
+    grid-template-columns: 17vw 17vw;
+    column-gap: 1vw;
+}
+.footer-base{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;   
+    bottom: 0;
+    right: 0;
+    background: rgba(28, 29, 34, 0.5);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    text-align: center; 
+}
+.footer-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;   
+    bottom: 0;
+    right: 0;
+    background-color: rgb(28, 29, 34);
+    text-align: center; 
+    z-index: 1;
+    border: none;
+}
+.footer-p{
+    display: inline-block;
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    color: white;
+    padding: 20px;
+}
+.footer-icon{
+    display: grid;
+    grid-template-columns: 150px 150px;
+}
+.footer-img{
+    width: 40px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+.hidden{
+    opacity: 0;
+    transition: opacity 2s;
+}
+.show{
+    opacity: 1;
+}
+.exit{
+    animation: exit 2s ease;
+}
+@keyframes exit {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        display: none;
+    }
 }

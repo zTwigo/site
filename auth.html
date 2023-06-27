@@ -16,7 +16,8 @@
             .split("&")
             .map(v => v.split("="))
             .reduce( (pre, [key, value]) => ({ ...pre, [key]: value }), {} );
-            console.log(result);
+            const access_token = result['#access-token'];
+            console.log(access_token);
         </script>
     </head>
     <body>

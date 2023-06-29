@@ -25,7 +25,12 @@
                     xhrr.setRequestHeader('Authorization',`Bearer ${access_token}`);
                     xhrr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
                     xhrr.onload = () => {
-                    console.log(xhrr.response);
+                        console.log(xhrr.response);
+                        var response = JSON.parse(xhrr.response);
+                        var sub = response['data'][0]['tier'];
+                        if(tier === '1000'){
+                            document.body.innerHTML = 'FJSAHFSA';
+                        }
                 }
                 xhrr.send();
                 }

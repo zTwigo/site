@@ -27,10 +27,10 @@
                     xhrr.onload = () => {
                         console.log(xhrr.response);
                         var response = JSON.parse(xhrr.response);
-                        var sub = response['data'][0]['tier'];
-                        if(tier === '1000'){
-                            document.body.innerHTML = 'FJSAHFSA';
-                        }
+                        var sub = response['data'];
+                        // if(tier === '1000'){
+                        //     document.body.innerHTML = 'FJSAHFSA';
+                        // }
                 }
                 xhrr.send();
                 }

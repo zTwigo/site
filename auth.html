@@ -28,11 +28,12 @@
                         console.log(xhrr.response);
                         var response = JSON.parse(xhrr.response);
                         var sub = response['data'][0]['tier'];
-                        if(sub === '1000'){
+                        if(xhr.status === 404){
+                            document.body.innerHTML = 'povero';
+                        }else{
+                            if(sub === '1000'){
                             document.body.innerHTML = 'FJSAHFSA';
                         }
-                        else{
-                            document.body.innerHTML = 'SEI POVERO!S';
                         }
                 }
                 xhrr.send();

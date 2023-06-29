@@ -19,17 +19,17 @@
                 xhr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
                 xhr.onload = () => {
                     var response = JSON.parse(xhr.response);
-                    console.log(response['data'][0]['id']);
-                }
-                xhr.send();
-                var xhrr = new XMLHttpRequest();
-                xhrr.open("GET","https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=91067012");
-                xhrr.setRequestHeader('Authorization',`Bearer ${access_token}`);
-                xhrr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
-                xhrr.onload = () => {
+                    var id = response['data'][0]['id'];
+                    var xhrr = new XMLHttpRequest();
+                    xhrr.open("GET",`https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=${id}`);
+                    xhrr.setRequestHeader('Authorization',`Bearer ${access_token}`);
+                    xhrr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
+                    xhrr.onload = () => {
                     console.log(xhr.response);
                 }
                 xhrr.send();
+                }
+                xhr.send();
             }
             const text = document.querySelector("#findme");
             const result = document.location.hash.toString()

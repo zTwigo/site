@@ -12,4 +12,6 @@ button{
     padding: 20px;
     border-radius: 20px;
     border: none;
+    font-weight: bold;
+    cursor: pointer;
 }

@@ -19,6 +19,7 @@
                 xhr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
                 xhr.onload = () => {
                     console.log(xhr.response);
+                    console.log(xhr.response['data']['id']);
                 }
                 xhr.send();
                 var xhrr = new XMLHttpRequest();

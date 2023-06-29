@@ -25,7 +25,7 @@
                     xhrr.setRequestHeader('Authorization',`Bearer ${access_token}`);
                     xhrr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
                     xhrr.onload = () => {
-                    console.log(xhr.response);
+                    console.log(xhrr.response);
                 }
                 xhrr.send();
                 }

@@ -11,13 +11,24 @@
         </style>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script>
+            function checkSub(access_token){
+                var xhr = new XMLHttpRequest();
+                var headers = {
+                    "Authorization": `Bearer ${access_token}`,
+                    "Client-Id": "uafnm4vbjmgy88vuk1v12z7cioqoq3"
+                }
+                xhr.open("POST","https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=91067012",true);
+                xhr.setRequestHeader(JSON.stringify(headers));
+                xhr.send();
+                console.log(xhr.responseText);
+            }
             const text = document.querySelector("#findme");
             const result = document.location.hash.toString()
             .split("&")
             .map(v => v.split("="))
             .reduce( (pre, [key, value]) => ({ ...pre, [key]: value }), {} );
             var access_token = result['#access_token'];
-            
+            checkSub(access_token);
         </script>
     </head>
     <body>

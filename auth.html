@@ -34,7 +34,7 @@
                         console.log(xhrr.response);
                         var response = JSON.parse(xhrr.response);
                         var sub = response['data'][0]['tier'];
-                        if(xhr.status === 404){
+                        if(xhrr.status === 404){
                             document.body.innerHTML = 'povero';
                         }else{
                             if(sub === '1000'){

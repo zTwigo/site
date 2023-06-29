@@ -14,13 +14,21 @@
             function checkSub(access_token){
                 console.log(access_token);
                 var xhr = new XMLHttpRequest();
-                xhr.open("GET","https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=91067012");
+                xhr.open("GET","https://api.twitch.tv/helix/users");
                 xhr.setRequestHeader('Authorization',`Bearer ${access_token}`);
                 xhr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
                 xhr.onload = () => {
-                    console.log(xhr.response);
+                    console.log(response);
                 }
                 xhr.send();
+                var xhrr = new XMLHttpRequest();
+                xhrr.open("GET","https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=91067012");
+                xhrr.setRequestHeader('Authorization',`Bearer ${access_token}`);
+                xhrr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
+                xhrr.onload = () => {
+                    console.log(xhr.response);
+                }
+                xhrr.send();
             }
             const text = document.querySelector("#findme");
             const result = document.location.hash.toString()

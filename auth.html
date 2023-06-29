@@ -13,12 +13,9 @@
         <script>
             function checkSub(access_token){
                 var xhr = new XMLHttpRequest();
-                var headers = {
-                    "Authorization": `Bearer ${access_token}`,
-                    "Client-Id": "uafnm4vbjmgy88vuk1v12z7cioqoq3"
-                }
                 xhr.open("POST","https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=91067012",true);
-                xhr.setRequestHeader(JSON.stringify(headers));
+                xhr.setRequestHeader('Authorization',`Bearer ${access_token}`);
+                xhr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
                 xhr.send();
                 console.log(xhr.responseText);
             }

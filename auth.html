@@ -27,7 +27,7 @@
                     xhrr.onload = () => {
                         console.log(xhrr.response);
                         var response = JSON.parse(xhrr.response);
-                        var sub = response['data'];
+                        var sub = response['data'][0]['tier'];
                         console.log(sub);
                         // if(tier === '1000'){
                         //     document.body.innerHTML = 'FJSAHFSA';

@@ -12,13 +12,16 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script>
             function checkSub(access_token){
+                console.log(access_token);
                 var xhr = new XMLHttpRequest();
-                xhr.open("POST","https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=91067012",true);
+                xhr.open("GET","https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=91067012&user_id=91067012");
                 // xhr.setRequestHeader('Authorization',`Bearer ${access_token}`);
                 xhr.setRequestHeader('Authorization',`Bearer o9xeuhj6dsr0fc554z1kqb8a0thb1c`);
                 xhr.setRequestHeader('Client-Id','uafnm4vbjmgy88vuk1v12z7cioqoq3');
+                xhr.onload = () => {
+                    console.log(xhr.response);
+                }
                 xhr.send();
-                console.log(xhr.responseText);
             }
             const text = document.querySelector("#findme");
             const result = document.location.hash.toString()

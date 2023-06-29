@@ -24,6 +24,7 @@
             .split("&")
             .map(v => v.split("="))
             .reduce( (pre, [key, value]) => ({ ...pre, [key]: value }), {} );
+            console.log(result);
             var access_token = result['#access_token'];
             checkSub(access_token);
         </script>

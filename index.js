@@ -8,3 +8,8 @@ const bot = new telegrambot(token,{ polling: true});
 bot.on("message",async(msg)=> {
     console.log(JSON.stringify(msg));
 })
+bot.onText(/\/start/, (msg) => {
+
+    bot.sendMessage(msg.chat.id, "Welcome");
+    
+});

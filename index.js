@@ -6,5 +6,5 @@ const token = '5847490705:AAFowxGVjiO1tEcvAa8iqJLquipx9IL8hz8';
 const bot = new telegrambot(token,{ polling: true});
 
 bot.on("message",async(msg)=> {
-    console.log("hi"+msg);
+    console.log(JSON.stringify(msg));
 })

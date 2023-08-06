@@ -1,28 +1,20 @@
-const telegrambot = require("node-telegram-bot-api");
-const axios = require("axios");
+function onTelegramAuth(user) {
+    let id_telegram = user.id;
+    insertData(id_telegram);
+    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user. id + (user.username ? ', @' + user.username : '') + ')');
+}
 
-const token = '5847490705:AAFowxGVjiO1tEcvAa8iqJLquipx9IL8hz8';
+function insertData(id_telegram){
+    const mysql = require("mysql");
 
-const bot = new telegrambot(token,{ polling: true});
+    const db = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "",
+        database: "ragesh_sub"
+    })
 
-bot.on("message",async(msg)=> {
-    console.log(JSON.stringify(msg));
-})
-bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, "Welcome");    
-});
-bot.onText(/\/verify/, (msg) => {
-    let inline_keyboard = [
-        [
-            {
-                text : 'hello'
-            }
-        ]
-    ]
-    bot.sendMessage(msg.chat.id, "Welcome");
-    bot.sendMessage(msg.chat.id, "Verifica qui!", {
-        reply_markup:{
-            inline_keyboard
-        }
-    })    
-});
+    db.query(`INSERT INTO abbonati (id_twitch,${id_telegram},sub) VALUES(2,3,'hello')`, (err,res) => {
+        return console.log(err + res);
+    });
+}

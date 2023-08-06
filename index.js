@@ -5,6 +5,8 @@ function onTelegramAuth(user) {
 }
 
 function insertData(id_telegram){
+
+    console.log("Hello");
     const mysql = require("mysql");
 
     const db = mysql.createConnection({

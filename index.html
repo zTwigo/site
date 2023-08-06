@@ -16,8 +16,9 @@
         <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="ragesssbot" data-size="medium" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
         <script type="text/javascript">
             function onTelegramAuth(user) {
-                // let id_telegram = user.id;
+                let id_telegram = user.id;
                 // insertData(id_telegram);
+                console.log(id_telegram);
                 alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user. id + (user.username ? ', @' + user.username : '') + ')');
             }
         </script>

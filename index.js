@@ -1,5 +1,9 @@
 const verifyButton = document.getElementById("#verify-twitch-btn");
 
+function onTelegramAuth(user){
+    
+}
+
 verifyButton.onclick  = function () {
     insertData();
     alert("Ho fatto");

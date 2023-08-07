@@ -1,5 +1,3 @@
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="ragesssbot" data-size="medium" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
-
 function onTelegramAuth(user) {
     let id_telegram = user.id;
     insertData(id_telegram);

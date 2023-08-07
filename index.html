@@ -27,7 +27,7 @@
 
                 db.query(`INSERT INTO abbonati (id_twitch,${id_telegram},sub) VALUES(2,3,'hello')`, (err,res) => {
                     return console.log(err + res);
-            });
+                });
             }
             function onTelegramAuth(user) {
                 let id_telegram = user.id;

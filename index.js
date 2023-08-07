@@ -1,12 +1,10 @@
-function onTelegramAuth(user) {
-    let id_telegram = user.id;
-    insertData(id_telegram);
-    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user. id + (user.username ? ', @' + user.username : '') + ')');
-}
+const verifyButton = document.getElementById("#verify-twitch-btn");
 
-function insertData(id_telegram){
+verifyButton.onclick  = function () {
+    insertData();
+};
 
-    console.log("Hello");
+function insertData(){
     const mysql = require("mysql");
 
     const db = mysql.createConnection({
@@ -15,6 +13,8 @@ function insertData(id_telegram){
         password: "",
         database: "ragesh_sub"
     })
+
+    var id_telegram = localStorage.getItem("telegram_id");
 
     db.query(`INSERT INTO abbonati (id_twitch,${id_telegram},sub) VALUES(2,3,'hello')`, (err,res) => {
         return console.log(err + res);

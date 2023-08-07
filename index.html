@@ -8,7 +8,7 @@
         <title>Sub ragesh</title>
     </head>
     <body>
-        <a href="https://id.twitch.tv/oauth2/authorize?client_id=uafnm4vbjmgy88vuk1v12z7cioqoq3&redirect_uri=https%3A%2F%2Fsubragesh.netlify.app%2Fauth&response_type=token&force_verify=true&scope=user%3Aread%3Asubscriptions" target="_blank" rel="noopener noreferrer"><button>
+        <a href="https://id.twitch.tv/oauth2/authorize?client_id=uafnm4vbjmgy88vuk1v12z7cioqoq3&redirect_uri=https%3A%2F%2Fsubragesh.netlify.app%2Fauth&response_type=token&force_verify=true&scope=user%3Aread%3Asubscriptions" target="_blank" rel="noopener noreferrer"><button id="verify-twitch-btn">
             Verify now
             </button>
         </a>
@@ -30,10 +30,8 @@
                 });
             }
             function onTelegramAuth(user) {
-                let id_telegram = user.id;
                 localStorage.setItem("telegram_id",id_telegram);
-                console.log(id_telegram);
-                alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user. id + (user.username ? ', @' + user.username : '') + ')');
+                alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
             }
         </script>
     </body>

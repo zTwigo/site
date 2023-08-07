@@ -2,6 +2,7 @@ const verifyButton = document.getElementById("#verify-twitch-btn");
 
 verifyButton.onclick  = function () {
     insertData();
+    alert("Ho fatto");
 };
 
 function insertData(){

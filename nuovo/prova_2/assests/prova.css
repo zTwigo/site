@@ -1,0 +1,384 @@
+/* Fonts */
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
+@import url('https://fonts.cdnfonts.com/css/moonrising');
+@import url('https://fonts.cdnfonts.com/css/ampero');
+@import url('https://fonts.cdnfonts.com/css/gnuolane');
+@import url('https://fonts.cdnfonts.com/css/nexa-bold');
+@import url('https://fonts.cdnfonts.com/css/black-bison');
+:root{
+    --body-main-color: #4931AF;
+    --title-main-color: #6706A5;
+    --p-main-color: #bea3d3;
+    --footer-main-color: #44245E;
+}
+/* Body and general css properties */
+html{
+    height: 100%;
+}
+body{
+    background-color: var(--body-main-color);  
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+p,ol{
+    font-family: 'Nexa', sans-serif;
+    font-weight: bolder;
+    color: var(--p-main-color);
+}
+.title{
+    font-family: 'Black bison', sans-serif;
+    text-align: center;
+    color: var(--title-main-color);
+    font-size: 18px;
+}
+/* General container */
+.container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.mh-100{
+    max-height: 100%!important;
+}
+.text-center{
+    text-align: center;
+}
+/* General banner */
+.banner{
+    width: 100%;
+    background-color: var(--body-main-color);
+}
+/* First banner */
+.banner-image{
+    height: 172px;
+    top: 0;
+    display: flex;
+    background-color: white;
+}
+/* Main banner */
+.banner-main{
+    margin-top: 40px;
+    height: 500px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* Main banner body */
+.banner-main-body{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 15%;
+    bottom: 60%;
+}
+.banner-main-href{
+    display: flex;
+    position: absolute;
+    top:13%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.banner-main-info{
+    display: flex;
+    flex-direction: column;
+}
+/* Main banner title */
+.banner-main-title{
+    margin-top: 5px;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+/* Main banner description */
+.banner-main-description{
+    font-size: 16px;
+    font-weight: bolder;
+}
+/* Main banner profile pic */
+.logo-rage{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    border: 7px;
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    border-color: var(--body-main-color);
+    border-style: solid;
+}
+.banner-main-twitch{
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-main-btn, .banner-main-btn-prime{
+    color: white;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: auto;
+    cursor: pointer;
+    font-family: 'Moonrising', sans-serif;
+    border-radius: 7px;                                
+    background-color: var(--footer-main-color);
+    box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.2);
+    border-style: none;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+}
+.twitch_span{
+    color: var();
+}
+.banner-main-vantaggi{
+    margin-top: 10px;
+}
+.banner-main-vantaggi-p{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.banner-main-vantaggi-title{
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+.banner-main-logo{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+.banner-footer-main{
+    box-shadow: 5px 5px 20px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    background-color: var(--footer-main-color);
+    width: 100%;
+    height: 50px;
+    flex-direction: column;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+.banner-footer-main p{
+    color: white;
+}
+.banner-footer-card{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.banner-footer-card-text{
+    color: white;
+    align-items: center;
+    height: 88%;
+    justify-content: center;
+    width: 40%;
+    font-size: 14px;
+}
+.banner-footer-card-body{
+    height: 95%;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-size: auto;
+    display: flex;
+    width: 25%;
+    margin-right: 3%;
+    align-items: center;
+    background: rgba(28, 29, 34, 0);
+    font-family: 'Moonrising', sans-serif;                                
+    border-style: none;
+    /*padding: 20px 60px;*/
+}
+.footer-card-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: rgb(231, 231, 231);
+}
+.instagram-btn-footer,.discord-btn-footer,.tiktok-btn-footer{
+    display: flex;
+    color: white;
+    background-size: auto;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(28, 29, 34, 0);
+    font-family: 'Moonrising', sans-serif;
+    box-shadow: 5px 5px 20px 20px rgba(39, 38, 38, 0.2);                                
+    border-style: none;
+    height: 50px;
+    width: 68px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.prime_logo{
+    width: 80px;
+}
+.prime_span{
+    margin-bottom: 1px;
+    margin-left: 5px;
+    font-size: 9px;
+}
+.instagram-btn-footer{
+    background-color: rgb(233, 41, 169);
+}
+.discord-btn-footer{
+    background-color: rgb(88, 101, 242);
+}
+.tiktok-btn-footer{
+    background-color: black;
+}
+.span-btn-footer{
+    /*margin-left: 10px;*/
+    display: none;
+}
+.logo{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.logo-main{
+    object-fit: contain;
+    width: 100%;
+    height: 100%; 
+}
+/* MEDIA HEIGHT QUERIES GENERAL */
+@media (min-width: 500px) and (min-height: 763px){
+    .container, body{
+        height: 100%;
+        position: relative;
+    }
+    .banner-footer-main{
+        position: absolute;
+   
+    }
+}
+/* MEDIA HEIGHT QUERIES FOR MOBILE DEVICES */
+@media (max-width: 326px){
+    .banner-main{
+        height: 520px;
+    }
+}
+@media (max-width: 500px) and (min-height: 763px){
+    .container, body{
+        height: 100%;
+        position: relative;
+    }
+    .banner-footer-main{
+        position: absolute;
+        bottom: 0;
+    }
+}
+/* @media only screen and (min-height: 721px){
+    .container, body{
+        height: 100%;
+    }
+    .banner-footer-card{
+        height: 100%;
+    }
+    .banner-footer-card-body{
+        height: 100%;
+        align-items: flex-end;
+    }
+    .banner-footer-card-body a{
+        height: 50%;
+    }
+    .instagram-btn-footer,.discord-btn-footer,.tiktok-btn-footer{
+        height: 100%;
+    }
+    .banner-footer-main{
+        position: fixed;
+        justify-content: flex-end;
+        height: 10%;
+        bottom: 0;
+    }
+} */
+/* MEDIA WIDTH QUERIES MOBILE DEVICES */
+@media (max-width:250px){
+    .banner-footer-card-body{
+        width: 45%;
+    }
+}
+@media (min-width: 250px) and (max-width: 290px){
+    .banner-footer-card-body{
+        width: 40%;
+    }
+}
+@media (min-width: 290px) and (max-width: 350px){
+    .banner-footer-card-body{
+        width: 35%;
+    }
+}
+@media (min-width:350px) and (max-width: 440px){
+    .banner-footer-card-body{
+        width: 30%;
+    }
+}
+@media (min-width: 310px) and (max-width:345px){
+    .instagram-btn-footer,.discord-btn-footer,.tiktok-btn-footer{
+        width: 80px;
+        margin: 0;
+    }
+    .logo{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media (min-width: 345px) and (max-width: 414px){
+    .span-btn-footer{
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .instagram-btn-footer,.discord-btn-footer,.tiktok-btn-footer{
+        width: 100px;
+    }
+}
+@media (min-width: 415px){
+    .span-btn-footer{
+        margin-left: 5px;
+    }
+    .instagram-btn-footer,.discord-btn-footer,.tiktok-btn-footer{
+        width: 120px;
+    }
+    .logo{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media (min-width: 750px){
+    .banner-footer-card-body{
+        width: 45%;
+        margin-right: 1%;
+    }
+    .footer-logo{
+        height: 15px;
+        width: 15px;
+    }
+    .span-btn-footer{
+        font-size: 12px;
+        color: black;
+    }
+    .footer-card-social{
+        width: 100px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .span-btn-footer{
+        display: block;
+    }
+}

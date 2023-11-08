@@ -1,0 +1,202 @@
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
+@import url('https://fonts.cdnfonts.com/css/moonrising');
+@import url('https://fonts.cdnfonts.com/css/ampero');
+@import url('https://fonts.cdnfonts.com/css/gnuolane');
+@import url('https://fonts.cdnfonts.com/css/nexa-bold');
+@import url('https://fonts.cdnfonts.com/css/black-bison');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    background-image:url("profilo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
+}
+.mh-100{
+    max-height: 100%!important;
+}
+.text-center{
+    text-align: center;
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 96px;
+        margin-right: 96px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+    .container{
+        max-width: 960px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .card .card-main {
+        margin: 8vh 0;
+    }
+  }
+.card-body{
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+@media screen and (min-width: 992px){
+    .logo{
+        font-size: 70px;
+    }
+}
+p{
+    font-family: 'Nexa', sans-serif;
+}
+.card-main{
+    background-color: blue;
+}
+/* Main container */
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* Card body */
+.content, .container-tier, .card-header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-p{
+    font-family: 'Nexa', sans-serif;
+    text-align: center;
+}
+.login-p{
+    text-align: center;
+    font-weight: bold;
+}
+.logo{
+    font-family: 'Black bison', sans-serif;
+    color: yellow;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.twitch-access-btn{
+    align-items: flex-start;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    font-family: 'Moonrising', sans-serif;                                
+    background-color: #ff796e;
+    background-image: linear-gradient(180deg,#ff7e7e,#e60808);
+    box-shadow: 5px 5px 20px 20px rgba(96, 96, 96, 0.2);
+    border-style: none;
+    padding: 8px 16px;
+}
+.bottone{
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
+.twitch_logo{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+.prime_logo{
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+.grande{
+    padding: 10px 12px;
+}
+.twitch_span{
+    color: black;
+    font-weight: bolder;
+    font-family: 'Moonrising', sans-serif;                                   
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    transition: width 0.5s, height 0.5s, border-radius 2s;
+}
+.footer-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;   
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(28, 29, 34, 0);
+    text-align: center; 
+}
+.footer-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-body-footer, .instagram-btn-footer{
+    align-items: flex-start;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    background: rgba(28, 29, 34, 0);
+    font-family: 'Moonrising', sans-serif;                                
+    border-style: none;
+    padding: 20px 60px;
+}
+.instagram-btn-footer{
+    background-color: rgb(233, 41, 169);
+    border-radius: 20px;
+}
+.instagram-span-btn-footer{
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.instagram-logo{
+    width: 20px;
+    height: 16px;
+}
+.tiktok-btn-footer{
+    align-items: flex-start;
+    border-radius: 20px;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Moonrising', sans-serif;                                
+    border-style: none;
+    padding: 20px 60px;
+}
+.discord-btn-footer{
+    align-items: flex-start;
+    border-radius: 20px;
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgb(88, 101, 242);
+    font-family: 'Moonrising', sans-serif;                                
+    border-style: none;
+    padding: 20px 60px;
+}
+.discord-span-btn-footer, .tiktok-span-btn-footer{
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
